@@ -9,6 +9,7 @@ Este repositório contém a documentação e o código-fonte para a solução do
 ## Organização do código
 
 - `projetoLigiaPS.ipynb`: notebook principal contendo o pipeline completo (análise, pré-processamento, configuração da arquitetura da rede, treinamento e visualização de curvas Loss/AUC).
+- `interpretaçãoGRADCAM.ipynb`: aplicação da técnica Grad-CAM para interpretabilidade visual do modelo.
 - `minha_submissao.csv`: exemplo da saída final formatada nos padrões exigidos pela plataforma.
 - `requirements.txt`: lista de dependências estruturada para garantir a reprodutibilidade do ambiente.
 - `melhor_modelo.h5`: artefato do Modelo, disponível no link do drive acima.
@@ -25,7 +26,8 @@ pip install -r requirements.txt
 ```
 
 1. Faça o Donwload do dataset:
-    1. Link: https://www.kaggle.com/datasets/tolgadincer/labeled-chest-xray-images
+    1. Link: https://www.kaggle.com/datasets/tolgadincer/labeled-chest-xray-images.
+    2. Caso deseje colocar os dados via drive, instale o dataset e altere o caminho disponível no notebook para o caminho do seu drive.
 
 ## Execução do código e geração da submissão
 
@@ -35,6 +37,7 @@ Caso deseje reproduzir o treinamento do modelo:
 
 - Abra o arquivo `projetoLigiaPS.ipynb`  e execute as células sequencialmente. O pipeline aplicará o pré-processamento de imagens e o cálculo dos pesos da classe.
 - Ao fim do treinamento, o artefato `melhor_modelo.h5` será gerado localmente e os gráficos de validação serão plotados.
+- Após isso, caso deseje a análise com o Grad-CAM, pegue o  `melhor_modelo.h5` e de preferência suba o artefato via Drive e execute as céludas do arquivo `interpretaçãoGRADCAM.ipynb`.
 
 ### 2. Inferência e Geração do CSV
 
